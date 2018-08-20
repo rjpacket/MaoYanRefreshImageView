@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    >
+
+    <com.rjp.maoyanrefreshimageview.refresh_view.RefreshImageView
+        android:id="@+id/riv_mao_yan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:refresh_iv_border_color="#999999"
+        app:refresh_iv_border_width="5dp"
+        app:refresh_iv_cover_color="#eb1c42"
+        app:refresh_iv_gap_angle="20"
+        app:refresh_iv_src="@drawable/riv_test"
+        />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:layout_marginTop="10dp"
+        />
+</LinearLayout>

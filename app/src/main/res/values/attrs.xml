@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RefreshImageView">
+        <attr name="refresh_iv_src" format="reference" />
+        <attr name="refresh_iv_border_width" format="dimension" />
+        <attr name="refresh_iv_border_color" format="reference|color" />
+        <attr name="refresh_iv_cover_color" format="reference|color" />
+        <attr name="refresh_iv_gap_angle" format="integer" />
+    </declare-styleable>
+</resources>
