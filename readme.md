@@ -18,7 +18,7 @@
 
 ### 三、代码实现
 
-## 3.1 自定义View的模板
+#### 3.1 自定义View的模板
 
 ```
 public class RefreshImageView extends View {
@@ -47,7 +47,7 @@ public class RefreshImageView extends View {
 }
 ```
 
-## 3.2 onMeasure 处理
+#### 3.2 onMeasure 处理
 
 自定义第一步，你要知道自己的这个View需要多大的手机屏幕面积，也就是告诉手机我这个View的宽高。一般来说，是有固定的写法的，先判断是不是wrap_content的，是的话有两种处理
 
@@ -88,7 +88,7 @@ public class RefreshImageView extends View {
 
 这样得到的View就是一个正方形。
 
-## 3.3 圆弧Rect计算
+#### 3.3 圆弧Rect计算
 
 我们知道，画一段圆弧，一定要知道圆弧所在的正方形区域，而且，圆弧是画在View的边框上的，如果圆弧的宽度特别大的时候，实际上有一半的弧形是画到边界外面的，所以这里我们需要计算圆弧的区域。
 
@@ -127,7 +127,7 @@ public class RefreshImageView extends View {
 
 在确认了View的宽度width之后，直接在View内部减去一个弧形宽度的正方形区域内画圆弧，这样是不会超出View边界的。
 
-## 3.4 onDraw 画弧形
+#### 3.4 onDraw 画弧形
 
 ```
 public class RefreshImageView extends View {
@@ -174,7 +174,7 @@ public class RefreshImageView extends View {
 
 ![Screenshot_2018-08-20-19-08-41-369_com.rjp.maoyan.png](https://upload-images.jianshu.io/upload_images/5994029-9a859dcd4dcf7ec3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 3.5 onDraw 画水位
+#### 3.5 onDraw 画水位
 
 这里是根据进度来确定水位的高度的，所以需要从使用的地方传递进来一个浮点型progress。重要的一点是怎么给进度以下的部分上色？这里需要了解 [图像混合模式](https://www.cnblogs.com/libertycode/p/6290497.html)
 
@@ -247,7 +247,7 @@ public class RefreshImageView extends View {
 
 ![Screenshot_2018-08-20-19-23-26-296_com.rjp.maoyan.png](https://upload-images.jianshu.io/upload_images/5994029-f03877e1cf963e43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 3.6 绘制Logo
+#### 3.6 绘制Logo
 
 中间的logo的矩形应该比border的矩形更小，否则会重合border，这里需要通过勾股定理计算，也不复杂，不理解可以画一个图形帮助理解：
 
@@ -331,7 +331,7 @@ public class RefreshImageView extends View {
 }
 ```
 
-## 3.7 border 动画
+#### 3.7 border 动画
 
 如果没有logo图案，可以让View rotate实现旋转，但是有了logo这样导致logo也在旋转，不合理，所以需要不断的改变border的起始绘制位置，这样就很容易想到属性动画，0到360度的数值变化：
 
